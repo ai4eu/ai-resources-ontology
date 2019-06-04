@@ -86,6 +86,12 @@ dct:date rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  http://www.ai4eu.eu/ontologies/core#acumos_distribution
+:acumos_distribution rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Distribution ;
+                     rdfs:range xsd:anyURI .
+
+
 ###  http://www.ai4eu.eu/ontologies/core#download
 :download rdf:type owl:DatatypeProperty ;
           rdfs:domain :Distribution ;
