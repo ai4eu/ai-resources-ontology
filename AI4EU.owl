@@ -31,13 +31,17 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#accompanied_by
 :accompanied_by rdf:type owl:ObjectProperty ;
                 rdfs:domain :Distribution ;
-                rdfs:range :Documentation .
+                rdfs:range :Documentation ;
+                rdfs:comment "Associates a resource distribution with a documentation item for the resource."@en ;
+                rdfs:label "Accompanied by"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#associated_with
 :associated_with rdf:type owl:ObjectProperty ;
                  rdfs:domain :AIResource ;
-                 rdfs:range foaf:Project .
+                 rdfs:range foaf:Project ;
+                 rdfs:comment "Associates an AI resource with a project relevant to the resource."@en ;
+                 rdfs:label "Associated With"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#atTRL
@@ -49,13 +53,17 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#authority
 :authority rdf:type owl:ObjectProperty ;
            rdfs:domain :TechnologyReadinessLevel ;
-           rdfs:range foaf:Agent .
+           rdfs:range foaf:Agent ;
+           rdfs:comment "Associates a Technology Readiness Level with the organisation that defined it."@en ;
+           rdfs:label "Authority"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#distributed_as
 :distributed_as rdf:type owl:ObjectProperty ;
                 rdfs:domain :AIResource ;
-                rdfs:range :Distribution .
+                rdfs:range :Distribution ;
+                rdfs:comment "Associates an AI resource with one of its distributions"@en ;
+                rdfs:label "Distributed as"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#provider
@@ -67,7 +75,8 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#refers_to
 :refers_to rdf:type owl:ObjectProperty ;
            rdfs:domain :AIResource ;
-           rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> .
+           rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+           rdfs:label "Refers to"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#requires
@@ -89,7 +98,9 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#acumos_distribution
 :acumos_distribution rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Distribution ;
-                     rdfs:range xsd:anyURI .
+                     rdfs:range xsd:anyURI ;
+                     rdfs:comment "Associates a resource with its distribution in the AI4EU Acumos deployment."@en ;
+                     rdfs:label "Acumos Distribution"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#download
@@ -100,16 +111,28 @@ dct:date rdf:type owl:AnnotationProperty .
           rdfs:label "Download"@en .
 
 
+###  http://www.ai4eu.eu/ontologies/core#location
+:location rdf:type owl:DatatypeProperty ;
+          rdfs:domain foaf:Organization ;
+          rdfs:range xsd:anyURI ;
+          rdfs:comment "The country where an organisation participating in the development or management of a resource is located. It is recommended that the dbPedia URI of the corresponding country is provided."@en ;
+          rdfs:label "Location"@en .
+
+
 ###  http://www.ai4eu.eu/ontologies/core#trl
 :trl rdf:type owl:DatatypeProperty ;
      rdfs:domain :TechnologyReadinessLevel ;
-     rdfs:range xsd:integer .
+     rdfs:range xsd:integer ;
+     rdfs:comment "Associates a Technology Readiness Level instance with the corresponding numeric value."@en ;
+     rdfs:label "TRL Value"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#under_license
 :under_license rdf:type owl:DatatypeProperty ;
                rdfs:domain :Distribution ;
-               rdfs:range xsd:anyURI .
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "Associates a resource distribution with its accompanying license."@en ;
+               rdfs:label "Under License"@en .
 
 
 #################################################################
@@ -132,7 +155,8 @@ dct:date rdf:type owl:AnnotationProperty .
 
 ###  http://www.ai4eu.eu/ontologies/core#Company
 :Company rdf:type owl:Class ;
-         rdfs:subClassOf foaf:Organization ;
+         rdfs:subClassOf :Entity ,
+                         foaf:Organization ;
          rdfs:comment "A private institution or corporation."@en ;
          rdfs:label "Company"@en .
 
@@ -236,6 +260,7 @@ dct:date rdf:type owl:AnnotationProperty .
 
 ###  http://www.ai4eu.eu/ontologies/core#Quality
 :Quality rdf:type owl:Class ;
+         rdfs:subClassOf :Entity ;
          rdfs:comment "A qualitative or descriptive characteristic of an AI-related entity."@en ;
          rdfs:label "Quality"@en .
 

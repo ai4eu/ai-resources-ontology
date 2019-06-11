@@ -34,7 +34,8 @@
 
 :ncsr a owl:NamedIndividual, foaf:Organization ;
         foaf:name "National Centre for Scientific Research - Demokritos"@en ;
-        foaf:homepage "http://www.demokritos.gr"^^xsd:anyURI .
+        foaf:homepage "http://www.demokritos.gr"^^xsd:anyURI ;
+        :location "http://dbpedia.org/resource/Greece"^^xsd:anyURI .
 
 :eu a owl:NamedIndividual, foaf:Organization ;
       foaf:name "European Commission"@en .
