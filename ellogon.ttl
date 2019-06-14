@@ -13,13 +13,13 @@
 
 :ellogon a owl:NamedIndividual, ai:SoftwareComponent ;
   foaf:name "Ellogon"^^xsd:string ;
-  :distributed_as :ellogon-distro ;
-  :requires :CPU ;
+  ai:distributed_as :ellogon-distro ;
+  ai:requires :CPU ;
   dcterms:subject cso:natural_language_processing_systems ;
-  :keyword "Linguistic Pipelines"@en ,
+  ai:keyword "Linguistic Pipelines"@en ,
            "Language Engineering Platform"@en ,
            "NLP"@en ;
-  dcterms:bibliographicCitation "https://arxiv.org/pdf/cs/0205017"^^xsd:anyURI .
+  dcterms:bibliographicCitation "https://arxiv.org/pdf/cs/0205017"^^xsd:anyURI ;
   dcterms:creator :ncsr .
 
 :ellogon-distro: a owl:NamedIndividual, ai:StandAlone ;
@@ -35,7 +35,7 @@
 :ncsr a owl:NamedIndividual, foaf:Organization ;
         foaf:name "National Centre for Scientific Research - Demokritos"@en ;
         foaf:homepage "http://www.demokritos.gr"^^xsd:anyURI ;
-        :location "http://dbpedia.org/resource/Greece"^^xsd:anyURI .
+        ai:location "http://dbpedia.org/resource/Greece"^^xsd:anyURI .
 
 :eu a owl:NamedIndividual, foaf:Organization ;
       foaf:name "European Commission"@en .
@@ -57,5 +57,5 @@
 
 :trl9 a owl:NamedIndividual, ai:TechnologyReadinessLevel ;
         ai:authority :eu ;
-        ai:trl 9^^xsd:int ;
+        ai:trl 9 ;
         dcterms:description "actual system proven in operational environment (competitive manufacturing in the case of key enabling technologies; or in space)"@en .
