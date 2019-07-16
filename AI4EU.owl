@@ -47,7 +47,9 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#atTRL
 :atTRL rdf:type owl:ObjectProperty ;
        rdfs:domain :Distribution ;
-       rdfs:range :TechnologyReadinessLevel .
+       rdfs:range :TechnologyReadinessLevel ;
+       rdfs:comment "Associates a distribution of an AI resource with its technology readiness level."@en ;
+       rdfs:label "At TRL"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#authority
@@ -66,6 +68,13 @@ dct:date rdf:type owl:AnnotationProperty .
                 rdfs:label "Distributed as"@en .
 
 
+###  http://www.ai4eu.eu/ontologies/core#language_used
+:language_used rdf:type owl:ObjectProperty ;
+               rdfs:domain :Distribution ;
+               rdfs:comment "The programming language primarily used for/by an AI resource."@en ;
+               rdfs:label "Language Used"@en .
+
+
 ###  http://www.ai4eu.eu/ontologies/core#location
 :location rdf:type owl:ObjectProperty ;
           rdfs:domain foaf:Organization ;
@@ -76,26 +85,33 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#provider
 :provider rdf:type owl:ObjectProperty ;
           rdfs:domain :Distribution ;
-          rdfs:range foaf:Agent .
+          rdfs:range foaf:Agent ;
+          rdfs:comment "An entity responsible for the creation/distribution of a resource."@en ;
+          rdfs:label "Provider"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#refers_to
 :refers_to rdf:type owl:ObjectProperty ;
            rdfs:domain :AIResource ;
            rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+           rdfs:comment "Associates an AI resource with the AI fields it adheres to."@en ;
            rdfs:label "Refers to"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#requires
 :requires rdf:type owl:ObjectProperty ;
           rdfs:domain :AIResource ;
-          rdfs:range :ComputationalResource .
+          rdfs:range :ComputationalResource ;
+          rdfs:comment "Associates an AI resource with the computational resources it requires for functioning."@en ;
+          rdfs:label "Requires"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#used_in
 :used_in rdf:type owl:ObjectProperty ;
          rdfs:domain :AIResource ;
-         rdfs:range :ApplicationArea .
+         rdfs:range :ApplicationArea ;
+         rdfs:comment "Associates an AI resource with its application areas."@en ;
+         rdfs:label "Used in"@en .
 
 
 #################################################################
@@ -170,6 +186,7 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#Dataset
 :Dataset rdf:type owl:Class ;
          rdfs:subClassOf :KnowledgeComponent ;
+         rdfs:comment "A collection of data."@en ;
          rdfs:label "Dataset"@en .
 
 
@@ -210,6 +227,7 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#HardwareComponent
 :HardwareComponent rdf:type owl:Class ;
                    rdfs:subClassOf :AIResource ;
+                   rdfs:comment "A hardware AI resource (device/equipment)."@en ;
                    rdfs:label "Hardware Component"@en .
 
 
@@ -236,7 +254,9 @@ dct:date rdf:type owl:AnnotationProperty .
 
 ###  http://www.ai4eu.eu/ontologies/core#Model
 :Model rdf:type owl:Class ;
-       rdfs:subClassOf :KnowledgeComponent .
+       rdfs:subClassOf :KnowledgeComponent ;
+       rdfs:comment "An AI Model."@en ;
+       rdfs:label "Model"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#Ontology
@@ -254,7 +274,9 @@ dct:date rdf:type owl:AnnotationProperty .
 
 ###  http://www.ai4eu.eu/ontologies/core#Publication
 :Publication rdf:type owl:Class ;
-             rdfs:subClassOf :KnowledgeComponent .
+             rdfs:subClassOf :KnowledgeComponent ;
+             rdfs:comment "A published scholary manuscript."@en ;
+             rdfs:label "Publication"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#Quality
@@ -274,6 +296,7 @@ dct:date rdf:type owl:AnnotationProperty .
 ###  http://www.ai4eu.eu/ontologies/core#SoftwareComponent
 :SoftwareComponent rdf:type owl:Class ;
                    rdfs:subClassOf :AIResource ;
+                   rdfs:comment "A programmatic AI resource."@en ;
                    rdfs:label "Software Component"@en .
 
 
