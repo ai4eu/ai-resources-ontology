@@ -29,6 +29,7 @@
                                      :ellogon-userguide ;
                    ai:under_license :lgpl ;
                    ai:download "http://www.ellogon.org/index.php/download"^^xsd:anyURI .
+                   ai:language_used <http://dbpedia.org/resource/Tcl>
 
 :CPU a owl:NamedIndividual, ai:ComputationalResource .
 

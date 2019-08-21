@@ -24,6 +24,7 @@
 :wildcatpytorch-distro: a owl:NamedIndividual, ai:Library ;
                    ai:atTRL :trl4 ;
                    ai:under_license :mit ;
+                   ai:language_used <http://dbpedia.org/resource/Python_(language)> ;
                    ai:download "https://github.com/durandtibo/wildcat.pytorch"^^xsd:anyURI .
 
 :GPU a owl:NamedIndividual, ai:ComputationalResource .

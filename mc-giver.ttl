@@ -21,7 +21,8 @@
            "Classification"@en ;
   dcterms:creator :unibo .
 
-:mc-giver-distro: a owl:NamedIndividual, ai:StandAlone .
+:mc-giver-distro: a owl:NamedIndividual, ai:StandAlone ;
+                    ai:language_used <http://dbpedia.org/resource/Python_(language)> .
 
 :CPU a owl:NamedIndividual, ai:ComputationalResource .
 
