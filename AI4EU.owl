@@ -204,6 +204,13 @@ dct:date rdf:type owl:AnnotationProperty .
                rdfs:label "Documentation"@en .
 
 
+###  http://www.ai4eu.eu/ontologies/core#EducationalResource
+:EducationalResource rdf:type owl:Class ;
+                     rdfs:subClassOf :KnowledgeComponent ;
+                     rdfs:comment "A resource built and distributed for educational purposes"@en ;
+                     rdfs:label "Educational Resource"@en .
+
+
 ###  http://www.ai4eu.eu/ontologies/core#Embedded
 :Embedded rdf:type owl:Class ;
           rdfs:subClassOf :Distribution ;
@@ -215,6 +222,13 @@ dct:date rdf:type owl:AnnotationProperty .
 :Entity rdf:type owl:Class ;
         rdfs:comment "An AI-related concept that has a tangible manifestation (i.e. it has a physical or digital presence)"@en ;
         rdfs:label "Entity"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :KnowledgeComponent ;
+       rdfs:comment "A happening of note for the broader AI community"@en ;
+       rdfs:label "Event"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#Forum
@@ -305,6 +319,13 @@ dct:date rdf:type owl:AnnotationProperty .
             rdfs:subClassOf :Distribution ;
             rdfs:comment "A self-contained distribution of an AI resource."@en ;
             rdfs:label "StandAlone"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#SuccessStory
+:SuccessStory rdf:type owl:Class ;
+              rdfs:subClassOf :KnowledgeComponent ;
+              rdfs:comment "A significant outcome, event or product"@en ;
+              rdfs:label "Success Story"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#TechnologyReadinessLevel
