@@ -161,6 +161,13 @@ dct:date rdf:type owl:AnnotationProperty .
             rdfs:label "AI Resource"@en .
 
 
+###  http://www.ai4eu.eu/ontologies/core#Application
+:Application rdf:type owl:Class ;
+             rdfs:subClassOf :StandAlone ;
+             rdfs:comment "A distribution directly executable on the user's hardware"@en ;
+             rdfs:label "Application"@en .
+
+
 ###  http://www.ai4eu.eu/ontologies/core#ApplicationArea
 :ApplicationArea rdf:type owl:Class ;
                  rdfs:subClassOf :Quality ;
@@ -195,6 +202,13 @@ dct:date rdf:type owl:AnnotationProperty .
               rdfs:subClassOf :Entity ;
               rdfs:comment "A specific form of packaging and means of exposure and availability for an AI resource."@en ;
               rdfs:label "Distribution"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#DockerContainer
+:DockerContainer rdf:type owl:Class ;
+                 rdfs:subClassOf :StandAlone ;
+                 rdfs:comment "A standalone distribution of an AI resource, bundled as a Docker container"@en ;
+                 rdfs:label "Docker Container"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#Documentation
@@ -312,6 +326,13 @@ dct:date rdf:type owl:AnnotationProperty .
                    rdfs:subClassOf :AIResource ;
                    rdfs:comment "A programmatic AI resource."@en ;
                    rdfs:label "Software Component"@en .
+
+
+###  http://www.ai4eu.eu/ontologies/core#SourceCode
+:SourceCode rdf:type owl:Class ;
+            rdfs:subClassOf :Distribution ;
+            rdfs:comment "The source code distribution of an AI resource"@en ;
+            rdfs:label "Source Code"@en .
 
 
 ###  http://www.ai4eu.eu/ontologies/core#StandAlone
