@@ -28,15 +28,15 @@
                                      :ellogon-specs ,
                                      :ellogon-userguide ;
                    ai:under_license :lgpl ;
-                   ai:download "http://www.ellogon.org/index.php/download"^^xsd:anyURI .
-                   ai:language_used <http://dbpedia.org/resource/Tcl>
+                   ai:download "http://www.ellogon.org/index.php/download"^^xsd:anyURI ;
+                   ai:language_used <http://dbpedia.org/resource/Tcl> .
 
 :CPU a owl:NamedIndividual, ai:ComputationalResource .
 
 :ncsr a owl:NamedIndividual, foaf:Organization ;
         foaf:name "National Centre for Scientific Research - Demokritos"@en ;
-        foaf:homepage "http://www.demokritos.gr"^^xsd:anyURI ;
-        ai:location "http://dbpedia.org/resource/Greece"^^xsd:anyURI .
+        foaf:homepage <http://www.demokritos.gr> ;
+        ai:location <http://dbpedia.org/resource/Greece> .
 
 :eu a owl:NamedIndividual, foaf:Organization ;
       foaf:name "European Commission"@en .

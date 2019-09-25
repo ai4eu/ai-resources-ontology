@@ -30,5 +30,5 @@
 
 :unibo a owl:NamedIndividual, foaf:Organization ;
         foaf:name "University of Bologna"@en ;
-        foaf:homepage "https://www.unibo.it/en"^^xsd:anyURI ;
-        ai:location "http://dbpedia.org/resource/Italy"^^xsd:anyURI .
+        foaf:homepage <https://www.unibo.it/en> ;
+        ai:location <http://dbpedia.org/resource/Italy> .

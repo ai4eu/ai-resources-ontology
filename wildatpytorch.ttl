@@ -31,13 +31,13 @@
 
 :upmc a owl:NamedIndividual, foaf:Organization ;
         foaf:name "UPMC"@en ;
-        foaf:homepage "http://www.upmc.fr/en/"^^xsd:anyURI ;
-        ai:location "http://dbpedia.org/resource/France"^^xsd:anyURI .
+        foaf:homepage <http://www.upmc.fr/en/> ;
+        ai:location <http://dbpedia.org/resource/France> .
 
 :thales a owl:NamedIndividual, ai:Company ;
         foaf:name "Thales Group"@en ;
-        foaf:homepage "https://www.thalesgroup.com/en"^^xsd:anyURI ;
-        ai:location "http://dbpedia.org/resource/France"^^xsd:anyURI .
+        foaf:homepage <https://www.thalesgroup.com/en> ;
+        ai:location <http://dbpedia.org/resource/France> .
 
 :eu a owl:NamedIndividual, foaf:Organization ;
       foaf:name "European Commission"@en .
