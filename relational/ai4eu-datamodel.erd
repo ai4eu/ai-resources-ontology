@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="ai4eu-erd-1.erd">
+	<entities>
+		<data-source id="sqlite_jdbc-16dfefce85a-29cb879f0ca317cd">
+			<entity id="1" name="AI_APPLICATION_AREA" fq-name="AI_APPLICATION_AREA" order="0" x="719" y="468"/>
+			<entity id="2" name="AI_RESEARCH_CATEGORY" fq-name="AI_RESEARCH_CATEGORY" order="1" x="872" y="40"/>
+			<entity id="3" name="AI_RESOURCE" fq-name="AI_RESOURCE" order="2" x="243" y="219"/>
+			<entity id="4" name="DISTRIBUTION" fq-name="DISTRIBUTION" order="3" x="473" y="42"/>
+			<entity id="5" name="DISTRIBUTION_TYPE" fq-name="DISTRIBUTION_TYPE" order="4" x="689" y="26"/>
+			<entity id="6" name="DOCUMENT" fq-name="DOCUMENT" order="5" x="28" y="45"/>
+			<entity id="7" name="KEYWORD" fq-name="KEYWORD" order="6" x="524" y="443"/>
+			<entity id="8" name="LABEL" fq-name="LABEL" order="7" x="31" y="429"/>
+			<entity id="9" name="LICENSE" fq-name="LICENSE" order="8" x="177" y="674"/>
+			<entity id="10" name="RATING" fq-name="RATING" order="9" x="32" y="260"/>
+			<entity id="11" name="SUPPORT_TYPE" fq-name="SUPPORT_TYPE" order="10" x="494" y="715"/>
+		</data-source>
+	</entities>
+	<notes>
+		<note id="12" order="11" x="237" y="64" w="198" h="108">CONTENT_TYPE refers to the internet mime-type like
+- text/csv
+- audio/mp3
+- video/h.264
+...</note>
+		<note id="13" order="12" x="469" y="295" w="164" h="29">All relations are one to many</note>
+		<note id="14" order="13" x="322" y="668" w="115" h="59">AI Resources can
+be linked to each
+other by URI</note>
+	</notes>
+	<relations>
+		<relation name="FK_AI_RESOURCE_AI_APPLICATION_AREA" fq-name="AI_RESOURCE.FK_AI_RESOURCE_AI_APPLICATION_AREA" type="fk" pk-ref="1" fk-ref="3"/>
+		<relation name="FK_AI_RESOURCE_AI_RESEARCH_CATEGORY" fq-name="AI_RESOURCE.FK_AI_RESOURCE_AI_RESEARCH_CATEGORY" type="fk" pk-ref="2" fk-ref="3"/>
+		<relation name="FK_AI_RESOURCE_AI_RESOURCE" fq-name="AI_RESOURCE.FK_AI_RESOURCE_AI_RESOURCE" type="fk" pk-ref="3" fk-ref="3">
+			<bend type="abs" x="402" y="743"/>
+			<bend type="rel" x="339" y="739"/>
+		</relation>
+		<relation name="FK_DOCUMENT_AI_RESOURCE" fq-name="DOCUMENT.FK_DOCUMENT_AI_RESOURCE" type="fk" pk-ref="3" fk-ref="6"/>
+		<relation name="FK_RATING_AI_RESOURCE" fq-name="RATING.FK_RATING_AI_RESOURCE" type="fk" pk-ref="3" fk-ref="10"/>
+		<relation name="FK_AI_RESOURCE_DISTRIBUTION" fq-name="AI_RESOURCE.FK_AI_RESOURCE_DISTRIBUTION" type="fk" pk-ref="4" fk-ref="3"/>
+		<relation name="CONTENT_TYPE refers to the internet mime-type like
+- text/csv
+- audio/mp3
+- video/h.264
+... -&gt; DISTRIBUTION" type="erdkey" pk-ref="4" fk-ref="12"/>
+		<relation name="FK_DISTRIBUTION_DISTRIBUTION_TYPE" fq-name="DISTRIBUTION.FK_DISTRIBUTION_DISTRIBUTION_TYPE" type="fk" pk-ref="5" fk-ref="4"/>
+		<relation name="CONTENT_TYPE refers to the internet mime-type like
+- text/csv
+- audio/mp3
+- video/h.264
+... -&gt; DOCUMENT" type="erdkey" pk-ref="6" fk-ref="12"/>
+		<relation name="FK_AI_RESOURCE_KEYWORD" fq-name="AI_RESOURCE.FK_AI_RESOURCE_KEYWORD" type="fk" pk-ref="7" fk-ref="3"/>
+		<relation name="FK_AI_RESOURCE_LABEL" fq-name="AI_RESOURCE.FK_AI_RESOURCE_LABEL" type="fk" pk-ref="8" fk-ref="3"/>
+		<relation name="FK_AI_RESOURCE_LICENSE" fq-name="AI_RESOURCE.FK_AI_RESOURCE_LICENSE" type="fk" pk-ref="9" fk-ref="3"/>
+		<relation name="FK_AI_RESOURCE_SUPPORT_TYPE" fq-name="AI_RESOURCE.FK_AI_RESOURCE_SUPPORT_TYPE" type="fk" pk-ref="11" fk-ref="3"/>
+	</relations>
+</diagram>
